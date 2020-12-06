@@ -1,0 +1,90 @@
+.section1{
+    grid-area:"sec0";
+    background-color: rgba(192,171,0,1);
+    text-align: center;
+}
+.container{
+    display:flex;
+    flex-flow:column nowrap;
+    align-items: center;
+}
+.card1,.card2,.card3,.card4,.card5{
+background-color: transparent;
+width: 50vw;
+height: 50vw;
+perspective: 1000px;
+margin:10px;
+}
+
+.cardInner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.card1:hover .cardInner, .card1:focus-within .cardInner,
+.card2:hover .cardInner, .card2:focus-within .cardInner,
+.card3:hover .cardInner, .card3:focus-within .cardInner,
+.card4:hover .cardInner, .card4:focus-within .cardInner,
+.card5:hover .cardInner, .card5:focus-within .cardInner{
+    transform: rotateY(180deg);
+}
+.front,.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility:hidden;
+}
+.back{
+    background-color:black;
+    color:white;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 1em;
+}
+@media screen and (min-width: 700px){
+    .card1,.card2,.card3,.card4,.card5{
+        background-color: transparent;
+        width: 40vw;
+        height: 40vw;
+        perspective: 1000px;
+        margin:10px;
+        }
+        .container{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content: center;
+}
+}
+@media screen and (min-width: 850px){
+    .container{
+        display:grid;
+        grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "card1 .     card2 .     card3"
+        ".     card4 .     card5 .    ";
+    }
+    .card1,.card2,.card3,.card4,.card5{
+    background-color: transparent;
+    width: 25vw;
+    height: 25vw;
+    perspective: 1000px;
+    margin:10px;
+    }
+    .card1{grid-area:card1;}
+    .card2{grid-area:card2;}
+    .card3{grid-area:card3;}
+    .card4{grid-area:card4;}
+    .card5{grid-area:card5;}
+}
+@media (prefers-reduced-motion){
+    .cardInner{
+        position:relative;
+        width:100%;
+        height:100%;
+        transition: transform 0s;
+        transform-style: preserve-3d;
+    }
+  }

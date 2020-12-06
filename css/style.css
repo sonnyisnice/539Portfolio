@@ -1,0 +1,202 @@
+.body{
+    display:grid;
+    grid-template-columns: 100px 2fr 2fr 100px;
+    grid-template-rows: 50px 75px auto 50px;
+    grid-template-areas:
+    "head head head head"
+    "navi navi navi navi"
+    "main main main main"
+    "foot foot foot foot";
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+}
+@keyframes heading {
+    0% {background-color: white; color: white;}
+    100% {background-color:rgba(192,0,0,1); color: black;}
+}
+h1{
+    font-size: 1.5em;
+    font-family: 'Crimson Text', serif;
+}
+h2{
+    font-size: 1.25em;
+    font-family: 'Crimson Text', serif;
+}
+h3{
+    font-size: 1.125em;
+    font-family: 'Crimson Text', serif;
+}
+.header{
+    grid-area: head;
+    background-color:rgba(192,0,0,1);
+    text-align: center;
+    animation-name: heading;
+    animation-duration: 2s;
+}
+#nav{
+    grid-area: navi;
+    display:flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: rgba(22,1,192,1);
+}
+a{
+    color:white;
+    font-family: 'Crimson Text', serif;
+    text-decoration: none;
+    margin: 1vw;
+}
+.mainSect3 a{
+    color: blue;
+    font-family: 'Exo', sans-serif;
+}
+
+.currentPage {
+    color:rgba(22,1,192,1);
+    text-decoration: underline;
+    background-color:white;
+}
+.footer{
+    grid-area: foot;
+    position: sticky;
+    bottom:0;
+    width:100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.main{
+    grid-area: main
+}
+img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+.formWrapper{
+    background-image:url("../img/koreaFlag.jpg");
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    opacity: 1;
+}
+#form{
+    background-color: white;
+    opacity: 0.75;
+    display:flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+input[type=text] {
+    border-radius: 1vw;
+    display:block;
+    font-size: 1.25em;
+    width:100%;
+}
+#text{
+    width:100%;
+    height:50vw;
+    box-sizing:border-box;
+    resize:none;
+}
+input[type=text]:focus{
+    background-color:rgba(22,1,192,0.25);
+}
+input[type=submit]{
+    background-color: black;
+    color:white;
+    font-size: 1.25em;
+    width:100%;
+}
+.skiptomain { 
+    background-color: black;
+    color: white;
+    position: absolute;
+    transform: translateY(-100px)
+}
+.skiptomain:focus{
+    transform: translateX(100px)
+}
+@media screen and (min-width: 700px){
+    .body{
+        display:grid;
+        grid-template-columns: 100px 2fr 2fr 100px;
+        grid-template-rows: 50px 75px auto 50px;
+        grid-template-areas:
+        "head head head head"
+        "navi navi navi navi"
+        "main main main main"
+        "foot foot foot foot";
+        font-family: 'Exo', sans-serif;
+        font-size: 20px;
+    }
+    #nav{
+        grid-area: navi;
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        background-color: rgba(22,1,192,1);
+    }
+    a{
+        color:white;
+        font-family: 'Crimson Text', serif;
+        text-decoration: none;
+        margin: 0px;
+    }
+    #form{
+        background-color: white;
+        opacity: 0.75;
+        display:block;
+    }
+}
+@media screen and (min-width: 850px){
+    .body{
+        display:grid;
+        grid-template-columns: 100px 2fr 2fr 2fr;
+        grid-template-rows: 50px auto 50px;
+        grid-template-areas:
+        "navi head head head"
+        "navi main main main"
+        "navi foot foot foot";
+        font-family: 'Exo', sans-serif;
+        font-size: 20px;    
+    }
+    #nav{
+        grid-area: navi;
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        background-color: rgba(22,1,192,1);
+    }
+    a{
+        color:white;
+        font-family: 'Crimson Text', serif;
+        text-decoration: none;
+        margin: 15px;
+    }
+    #form{
+        display:flex;
+        flex-flow:column wrap;
+        align-items: flex-start;
+    }
+    #text{
+        width:100%;
+        height:20vw;
+        box-sizing:border-box;
+        resize:none;
+    }
+    input[type=submit]{
+        background-color: black;
+        color:white;
+        font-size: 3em;
+        width:100%;
+    }
+   
+}
+@media (prefers-reduced-motion){
+    .header {
+      animation-name: none;
+    }
+  }
