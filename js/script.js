@@ -1,26 +1,26 @@
 $(function(){
     
         $(".vegetarianButton").click(function(){
-        $(".vegetarian").toggle("fast");});
+        $(".vegetarian").toggle();});
     
         $(".spicyButton").click(function(){
-        $(".Spicy").toggle("fast");});
+        $(".Spicy").toggle();});
     
         $(".notSpicyButton").click(function(){
-        $(".notSpicy").toggle("fast");});
+        $(".notSpicy").toggle();});
     
         $(".seoulButton").click(function(){
-        $(".seoul").toggle("fast");});
+        $(".seoul").toggle();});
     
         $(".busanButton").click(function(){
-        $(".busan").toggle("fast");});
+        $(".busan").toggle();});
     
         $(".daeguButton").click(function(){
-        $(".daegu").toggle("fast");});
+        $(".daegu").toggle();});
     
         $(".ulsanButton").click(function(){
-        $(".ulsan").toggle("fast");});
+        $(".ulsan").toggle();});
     
         $(".incheonButton").click(function(){
-        $(".incheon").toggle("fast");});
+        $(".incheon").toggle();});
       });
