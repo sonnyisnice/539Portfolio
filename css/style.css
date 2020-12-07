@@ -53,7 +53,7 @@ a{
 
 .currentPage {
     color:rgba(22,1,192,1);
-    text-decoration: underline;
+    text-decoration: underline overline;
     background-color:white;
 }
 .footer{
